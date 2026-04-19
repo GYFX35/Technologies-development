@@ -7,46 +7,94 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Global Technologies Development</h1>
-        <p>AI-Integrated Software for a Sustainable Future</p>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                GTD
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="features.html">Features</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Intelligent Software for a Sustainable Future</h1>
+        <p>Global Technologies Development integrates advanced AI tools to make technology accessible, sustainable, and powerful for everyone.</p>
+        <div class="hero-actions">
+            <a href="#demo"><button>Try Demo</button></a>
+            <a href="features.html" style="margin-left: 1rem; font-weight: 600;">Learn more &rarr;</a>
+        </div>
     </header>
+
     <main>
-        <section id="about">
-            <h2>About the Project</h2>
-            <p>
-                Global technologies development, assistance, and creation software integrated with artificial intelligence tools.
-                This project aims to make all technologies accessible to the general public and to promote them so that they are known to as many people as possible.
-            </p>
-        </section>
+        <div class="grid">
+            <section id="about" class="card">
+                <h2>Our Mission</h2>
+                <p>
+                    We aim to make all technologies accessible to the general public and to promote them so that they are known to as many people as possible. Our focus is on sustainability and human-centric AI.
+                </p>
+            </section>
 
-        <section id="ai-status">
-            <h2>AI Backend Status</h2>
-            <p id="backend-status">Loading status...</p>
-            <p id="tf-version"></p>
-        </section>
+            <section id="ai-status" class="card">
+                <h2>System Status</h2>
+                <div id="backend-container">
+                    <span id="backend-status" class="status-badge status-offline">Checking status...</span>
+                </div>
+                <p id="tf-version" style="margin-top: 1rem; font-size: 0.875rem; color: var(--muted);"></p>
+            </section>
+        </div>
 
-        <section id="demo">
+        <section id="demo" class="card" style="margin-top: 2rem;">
             <h2>Try our AI Assistance</h2>
+            <p>Experience the power of our integrated AI. Type a message below to interact with our proof-of-concept backend.</p>
             <div class="input-group">
                 <input type="text" id="user-input" placeholder="Type something for the AI...">
                 <button id="predict-btn">Process with AI</button>
             </div>
-            <p id="prediction-result"></p>
+            <div id="prediction-container" style="margin-top: 1.5rem; display: none;">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">AI Response:</p>
+                <div id="prediction-result" class="card" style="background-color: var(--background); border-style: dashed;"></div>
+            </div>
         </section>
 
-        <section id="licensing">
+        <section id="licensing" style="text-align: center; margin-top: 4rem;">
             <h2>Licensing</h2>
             <p>
                 The source code is available under the MIT License. Commercial use requires a separate license.
             </p>
-            <p>
+            <p style="margin-top: 1rem;">
                 For more details, see the <a href="LICENSE">LICENSE</a> file.
             </p>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Global Technologies Development</p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    GTD
+                </div>
+                <p>Empowering the world through sustainable technology and artificial intelligence.</p>
+            </div>
+            <div class="footer-links">
+                <h4 style="margin-bottom: 1rem;">Navigation</h4>
+                <ul style="list-style: none;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Global Technologies Development. All rights reserved.</p>
+        </div>
     </footer>
     <script src="frontend/js/main.js"></script>
 </body>
